@@ -1,0 +1,18 @@
+page { background: #f6f6f6; font-size: 28rpx; color: #222; }
+.section { padding: 24rpx 24rpx 0; font-weight: bold; font-size: 32rpx; }
+.card { background: #fff; margin: 16rpx 24rpx; padding: 24rpx; border-radius: 16rpx; display: flex; justify-content: space-between; align-items: center; }
+.name { font-size: 30rpx; font-weight: 500; }
+.sub { color: #888; font-size: 24rpx; margin-top: 8rpx; }
+.score { font-size: 36rpx; font-weight: bold; color: #2b8a3e; }
+.score.bad { color: #c92a2a; }
+.warn { color: #c92a2a; font-size: 24rpx; margin-top: 8rpx; }
+.empty { text-align: center; color: #999; padding: 80rpx 0; }
+.btn-row { display: flex; gap: 24rpx; margin: 24rpx; }
+.btn { flex: 1; text-align: center; padding: 24rpx 0; border-radius: 16rpx; background: #fff; border: 2rpx solid #ddd; font-size: 32rpx; }
+.btn.on-up { background: #ebfbee; border-color: #2b8a3e; }
+.btn.on-down { background: #fff5f5; border-color: #c92a2a; }
+.chips { display: flex; flex-wrap: wrap; gap: 16rpx; margin: 0 24rpx; }
+.chip { padding: 10rpx 24rpx; border-radius: 32rpx; background: #fff; border: 2rpx solid #ddd; font-size: 26rpx; }
+.chip.on { background: #fff4e6; border-color: #e8590c; color: #e8590c; }
+.input { background: #fff; margin: 24rpx; padding: 20rpx; border-radius: 16rpx; }
+.submit { margin: 24rpx; background: #e8590c; color: #fff; text-align: center; padding: 24rpx 0; border-radius: 16rpx; font-size: 32rpx; }

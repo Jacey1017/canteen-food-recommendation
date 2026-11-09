@@ -1,0 +1,9 @@
+<view wx:if="{{!loading && !list.length}}" class="empty">暂时没有踩雷菜品 🎉</view>
+<view class="card" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="openDish">
+  <view>
+    <view class="name">{{item.name}} ¥{{item.price}}</view>
+    <view class="sub">{{item.canteen}} · {{item.stall}} · {{item.n}} 人评价</view>
+    <view class="warn" wx:if="{{item.bad_text}}">{{item.bad_text}}</view>
+  </view>
+  <view class="score bad">{{item.pct}}</view>
+</view>

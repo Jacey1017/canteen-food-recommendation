@@ -1,0 +1,20 @@
+<view class="section">今日推荐</view>
+<view wx:if="{{!loading && !top.length}}" class="empty">还没有菜品数据</view>
+<view class="card" wx:for="{{top}}" wx:key="id" data-id="{{item.id}}" bindtap="openDish">
+  <view>
+    <view class="name">{{item.name}} ¥{{item.price}}</view>
+    <view class="sub">{{item.canteen}} · {{item.stall}} · {{item.n}} 人评价</view>
+  </view>
+  <view class="score">{{item.pct}}</view>
+</view>
+
+<block wx:if="{{fresh.length}}">
+  <view class="section">本周新菜</view>
+  <view class="card" wx:for="{{fresh}}" wx:key="id" data-id="{{item.id}}" bindtap="openDish">
+    <view>
+      <view class="name">{{item.name}} ¥{{item.price}}</view>
+      <view class="sub">{{item.canteen}} · {{item.stall}}</view>
+    </view>
+    <view class="score">{{item.pct}}</view>
+  </view>
+</block>

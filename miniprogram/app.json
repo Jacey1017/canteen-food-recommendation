@@ -1,0 +1,13 @@
+{
+  "pages": ["pages/index/index", "pages/avoid/avoid", "pages/dish/dish"],
+  "window": { "navigationBarTitleText": "食堂点评", "navigationBarBackgroundColor": "#ffffff" },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#e8590c",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "今日推荐" },
+      { "pagePath": "pages/avoid/avoid", "text": "避雷榜" }
+    ]
+  },
+  "style": "v2"
+}

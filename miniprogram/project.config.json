@@ -1,0 +1,7 @@
+{
+  "miniprogramRoot": "./",
+  "compileType": "miniprogram",
+  "setting": { "urlCheck": false, "es6": true, "minified": true },
+  "appid": "touristappid",
+  "projectname": "canteen-review"
+}

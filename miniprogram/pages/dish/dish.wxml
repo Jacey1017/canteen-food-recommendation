@@ -1,0 +1,29 @@
+<view wx:if="{{dish}}">
+  <view class="card">
+    <view>
+      <view class="name">{{dish.name}} ¥{{dish.price}}</view>
+      <view class="sub">{{dish.canteen}} · {{dish.stall}} · {{dish.n}} 人评价</view>
+      <view class="warn" wx:if="{{dish.bad_text}}">{{dish.bad_text}}</view>
+    </view>
+    <view class="score">{{dish.pct}}</view>
+  </view>
+
+  <view class="section">吃完了？一键评价</view>
+  <view class="btn-row">
+    <view class="btn {{liked === true ? 'on-up' : ''}}" data-liked="1" bindtap="choose">👍 好吃</view>
+    <view class="btn {{liked === false ? 'on-down' : ''}}" data-liked="0" bindtap="choose">👎 踩雷</view>
+  </view>
+
+  <view class="chips" wx:if="{{tagOptions.length}}">
+    <view wx:for="{{tagOptions}}" wx:key="*this" class="chip {{picked[item] ? 'on' : ''}}" data-tag="{{item}}" bindtap="toggleTag">{{item}}</view>
+  </view>
+  <textarea wx:if="{{liked !== null}}" class="input" placeholder="一句话补充（可选）" maxlength="200" bindinput="onText"></textarea>
+  <view wx:if="{{liked !== null}}" class="submit" bindtap="submit">提交</view>
+
+  <block wx:if="{{dish.recent_reviews.length}}">
+    <view class="section">最近评价</view>
+    <view class="card" wx:for="{{dish.recent_reviews}}" wx:key="id">
+      <view class="name">{{item.liked ? '👍' : '👎'}} {{item.text}}</view>
+    </view>
+  </block>
+</view>
